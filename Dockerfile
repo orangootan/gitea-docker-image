@@ -10,5 +10,4 @@ RUN cp /etc/gitea/conf/app.ini $GITEA_CUSTOM/conf/app.ini && \
 VOLUME $GITEA_CUSTOM /var/log/gitea
 WORKDIR $GITEA_CUSTOM
 USER $USER
-EXPOSE 22 3000
 ENTRYPOINT ["gitea", "web"]
