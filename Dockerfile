@@ -1,8 +1,8 @@
 FROM ring0club/git:2.13.0-r0
-RUN apk add openssh
-ARG REPO=http://dl-cdn.alpinelinux.org/alpine/edge/community
-ARG VERSION=1.1.1-r1
-RUN apk add gitea=$VERSION --update-cache --repository $REPO
+RUN apk add openssh --no-cache
+RUN apk add gitea=1.1.1-r1 \
+    --repository http://dl-cdn.alpinelinux.org/alpine/edge/community \
+    --no-cache
 # variable USER used by gitea to check for current user(!)
 ENV GITEA_CUSTOM=/var/lib/gitea USER=gitea
 RUN cp /etc/gitea/conf/app.ini $GITEA_CUSTOM/conf/app.ini && \
