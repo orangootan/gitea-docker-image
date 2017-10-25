@@ -8,7 +8,7 @@ ENV GITEA_WORK_DIR=/var/lib/gitea USER=gitea
 RUN mkdir $GITEA_WORK_DIR/custom/conf && \
     cp /etc/gitea/app.ini $GITEA_WORK_DIR/custom/conf/app.ini && \
     chown -R $USER:www-data $GITEA_WORK_DIR/custom/conf
-VOLUME $GITEA_WORK_DIR /var/log/gitea
+#VOLUME $GITEA_WORK_DIR /var/log/gitea
 WORKDIR $GITEA_WORK_DIR
 USER $USER
 ENTRYPOINT ["gitea", "web"]
