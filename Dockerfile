@@ -1,4 +1,4 @@
-FROM ring0club/git:2.15.0-r0
+FROM ring0club/git:2.15.0-r1
 RUN apk add openssh-keygen --no-cache && \
     apk add gitea=1.2.2-r0 \
     --repository https://dl-cdn.alpinelinux.org/alpine/edge/community \
