@@ -1,6 +1,6 @@
-FROM ring0club/git:2.31.1-r1
+FROM ring0club/git:2.32.0-r0
 RUN apk add openssh-keygen --no-cache
-RUN apk add gitea=1.14.1-r0 \
+RUN apk add gitea=1.14.3-r0 \
     --repository https://nl.alpinelinux.org/alpine/edge/community \
     --no-cache
 # variable USER used by gitea to check for current user(!)
